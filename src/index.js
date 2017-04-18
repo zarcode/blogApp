@@ -3,7 +3,7 @@ import { View, Text } from 'react-native'
 import { Router, Scene, Route, Actions } from 'react-native-router-flux'
 import { Provider, connect } from 'react-redux'
 import configureStore from './configureStore'
-import Posts from './components/posts'
+import Posts from './components/Posts'
 
 const Kernel = () => (
     <Provider store={configureStore()}>

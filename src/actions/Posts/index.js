@@ -1,3 +1,5 @@
+import * as settings from '../../constants'
+
 const fetchPostsRequest = () => ({
     type: "FETCH_POSTS_REQUEST"
 })
@@ -17,7 +19,7 @@ export const fetchPosts = (args) => (dispatch, getState) => {
 
     dispatch(fetchPostsRequest());
 
-    return fetch('http://localhost:8888/forums_api/wp-json/wp/v2/posts?')
+    return fetch(settings.SITE_URL + 'wp-json/wp/v2/posts?')
     .then(res => res.json())
     .then(json => {
         if(json.data && json.data.status == 404) {

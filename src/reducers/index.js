@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import blog from './blog';
+import blog from './Posts';
 
 const rootReducer = combineReducers({
     blog
